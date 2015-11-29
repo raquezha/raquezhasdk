@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class HomeActivity extends AppCompatActivity {
+import com.android.volley.manager.RequestManager;
+
+import java.util.Map;
+
+public class HomeActivity extends AppCompatActivity implements RequestManager.RequestListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +37,20 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRequest() {
+
+    }
+
+    @Override
+    public void onSuccess(String response, Map<String, String> headers, String url, int actionId) {
+
+    }
+
+    @Override
+    public void onError(String errorMsg, String url, int actionId) {
+
     }
 }
